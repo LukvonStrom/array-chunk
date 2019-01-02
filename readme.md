@@ -1,6 +1,6 @@
 # array-chunk
 
-> Chunk array on small pieces
+> Chunk array on small pieces by either a fixed numbers of items per chunk or by a fixed number of chunks.
 
 
 ## Install
@@ -13,35 +13,54 @@ $ npm install --save array-chunk
 ## Usage
 
 ```js
-var arrayChunk = require('array-chunk');
+const {chunk, chunkFixedChunkNumber} = require('array-chunk');
 
-arrayChunk([1, 2, 3, 4], 2);
-//=> [[1, 2], [3, 4]]
+// Chunk the Array with a fixed number of items per Chunk
+chunk([1, 2, 3, 4], 3);
+//=> [[1, 2, 3], [4]]
+
+// Chunk the Array with a fixed number of chunks
+chunkFixedChunkNumber([1, 2, 3, 4], 3);
+//=> [[1, 4], [2], [3]]
 ```
 
 
 ## API
 
-### arrayChunk(arr, size)
+### chunk(arr, size)
 
 #### arr
 
-*Required*
+*Required*  
 Type: `array` | [`TypedArray`](https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 
 Your array
 
 #### size
 
-*Required*
+*Required*  
 Type: `number`
 
 Length of nested array , default `1`
 
-## Related
+### chunkFixedChunkNumber(arr, size)
 
-* [flatten-vertex-data](https://github.com/glo-js/flatten-vertex-data) − flattens array data.
+#### arr
+
+*Required*  
+Type: `array` | [`TypedArray`](https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+
+Your array
+
+#### chunkNumber
+
+*Required*  
+Type: `number`
+
+Number of chunks to form , default `1`.  
+When the number of chunks is not divisible without remainders it fills the chunks starting with the first 'beginning left'.  
+
 
 ## License
 
-MIT © [hzlmn](github.com/hzlmn)
+MIT
