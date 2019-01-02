@@ -1,9 +1,9 @@
 {
   "name": "array-chunk",
-  "version": "1.0.0",
-  "description": "Chunk array on small pieces",
+  "version": "1.1.0",
+  "description": "Chunk array on small pieces by either a fixed numbers of items per chunk or by a fixed number of chunks.",
   "license": "MIT",
-  "repository": "hzlmn/array-chunk",
+  "repository": "LukvonStrom/array-chunk",
   "author": {
     "name": "Oleh Kuchuk",
     "email": "kuchuklehjs@gmail.com"
@@ -12,6 +12,10 @@
     {
       "name": "Dmitry Yv.",
       "email": "df.creative@gmail.com"
+    },
+    {
+      "name": "Lukas Fruntke",
+      "email": "lukas@fruntke.tech"
     }
   ],
   "engines": {
@@ -32,7 +36,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "jshint": "^2.9.5",
+    "jshint": "^2.9.7",
     "mocha": "*"
   }
 }
